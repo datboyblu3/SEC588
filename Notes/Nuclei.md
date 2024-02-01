@@ -1,4 +1,4 @@
-# Nuclei
+# Nuclei Vulnerability Scanner
 
 - Supports DNS, TCP Sockets and local file sharing
 - Supports out of band payloads through a hosted or self-hosted server that project discovery publishes, known as Interact.sh
