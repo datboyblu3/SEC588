@@ -1,3 +1,8 @@
+### Assetnote
+```
+https://wordlists.assetnote.io
+```
+
 ### Commonspeak2
 ```
 https://github.com/assetnote/commonspeak2
