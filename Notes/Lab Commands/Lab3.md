@@ -66,6 +66,12 @@ Or in the terminal
 firefox http://localhost:7171
 ```
 
+![image](https://github.com/datboyblu3/SEC588/assets/95729902/cf06a085-756f-4aff-997d-6bb9ed8eeacc)
+
+![image](https://github.com/datboyblu3/SEC588/assets/95729902/c649034a-4bd7-4589-b56e-516fa4cf698a)
+
+
+
 > Go here to find out more about these tools:
 > 
 > [eyewitness](https://github.com/RedSiege/EyeWitness)
