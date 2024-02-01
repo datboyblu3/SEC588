@@ -1,6 +1,21 @@
 ### Assetnote
+
 ```
 https://wordlists.assetnote.io
+```
+
+* Provides 1GB of wordlists available to download individually
+* Capability of being an open Amazon S3 buckey
+* You can provide Assetnote with a pull request through GitHub that adds the queries that you wish to look for
+
+Assetnote GitHub Repo:
+```
+https://github.com/assetnote/wordlists
+```
+
+Follow the below link to request a Pull Request:
+```
+https://github.com/assetnote/wordlists/blob/master/.github/workflows/wordlists.yml
 ```
 
 ### Commonspeak2
