@@ -44,7 +44,30 @@ Review the results, search for vulnerabilities marked as high severity
 cat /home/sec588/Coursefiles/workdir/nuclei-output.txt | grep -Ev "\[info\]|\[low\]"
 ```
 
-You can also take screenshots with eyewitness and/or gowitness. Go here to find more:
+You can also take screenshots with eyewitness and/or gowitness. 
+
+### Gowitness
+```
+gowitness file -f /home/sec588/Coursefiles/workdir/http-hosts.txt
+```
+
+**Launch the gowitness webserver to display the results**
+```
+gowitness report serve --address :7171
+```
+
+Afterwards, navigate to the page 
+```
+http://localhost:7171
+```
+
+Or in the terminal
+```
+firefox http://localhost:7171
+```
+
+> Go here to find out more about these tools:
+> 
 > [eyewitness](https://github.com/RedSiege/EyeWitness)
 > 
 > [gowitness](https://github.com/sensepost/gowitness)
