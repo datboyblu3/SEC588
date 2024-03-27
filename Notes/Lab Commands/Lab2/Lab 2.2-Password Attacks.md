@@ -1,6 +1,6 @@
 **Build a wordlist that matches the below syntax**
 
-SnakeJazz2020, which would be: Snake + Jazz + 2020
+We'll be building the synax off of the password, SnakeJazz2020, which would be: Snake + Jazz + 2020
 
 ```python
 echo "2019" >> /opt/Wordlister/words.txt
