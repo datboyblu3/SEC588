@@ -114,4 +114,13 @@ show creds
 ```python
 exit
 ```
+**Launch a tool set called MFASweep which will allow us to check for MultiFactor Authentication on many Microsoft Services**
+**Run pwsh command to launch MFASweep.ps1**
+```python
+pwsh
+```
+Import-Module ./MFASweep.ps1
 
+```python
+Invoke-MFASweep -Username summer@sec588.org -Password SnakeJazz2020
+```
