@@ -43,3 +43,20 @@ cat /home/sec588/Coursefiles/workdir/dnsx-awesome-sparrow-sec588.json | jq -r '.
 ```python
 cat /home/sec588/Coursefiles/workdir/subfinder-hosts.txt | anew /home/sec588/Coursefiles/workdir/target-systems-by-host.txt
 ```
+
+**Pull out the key of Host which is the hostname field. We can use anew to look a the file, ensure that we don't have any duplicates and then redirect the output to our target-systems-by-host.txt file**
+```python
+cat /home/sec588/Coursefiles/workdir/dnsx-awesome-sparrow-sec588.json | jq -r '.host' | anew /home/sec588/Coursefiles/workdir/target-systems-by-host.txt
+```
+
+**Pull out all the corresponding IP addresses by using a different query**
+```python
+cat /home/sec588/Coursefiles/workdir/dnsx-awesome-sparrow-sec588.json | jq -r '. | "\(.host) \(.a[]?)"' | grep -v www-dev | grep -v mail | awk '{ print $2 }' | anew /home/sec588/Coursefiles/workdir/target-systems-by-ip.txt
+```
+>
+    
+    -r : Display results in "raw" mode
+    '. : This command will grab all the json objects that came over the command pipe
+    | : The pipe operator within jq will pass all the objects over
+    \(.host) : Pull out a key that matches the name host
+    \(.a[]?) : Pull out a key that matches the name of a, for a records, and will only display values if they exist (?)
