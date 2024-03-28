@@ -27,7 +27,22 @@ sec588@slingshot:~/Coursefiles/workdir$ aws s3 ls --profile lab25X
 An error occurred (AccessDenied) when calling the ListBuckets operation: Access Denied
 ```
 
-**Try one of the buckets in uploader-service.js**
+**Try one of the buckets in uploader-service.js and see if we can list buckets in that bucket directly**
 ```python
 aws s3 ls s3://pictures.awesome-sparrow.sec588.cloud/ --profile lab25X
 ```
+
+**Copy the bucket contents to try and get contents out of the bucket**
+```python
+aws s3 cp --profile lab25X s3://pictures.awesome-sparrow.sec588.cloud/raven.png /home/sec588/Coursefiles/workdir/raven.png
+```
+The below output means the user can list the bucket's contents but cannot download the bucket's content:
+```python
+sec588@slingshot:~/Coursefiles/workdir$ aws s3 cp --profile lab25X s3://pictures.awesome-sparrow.sec588.cloud/raven.png /home/sec588/Coursefiles/workdir/raven.png
+fatal error: An error occurred (403) when calling the HeadObject operation: Forbidden
+```
+
+The a
+
+
+
